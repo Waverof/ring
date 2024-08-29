@@ -1,0 +1,39 @@
+*** SPICE deck for cell IOPAD{sch} from library CUOIKI
+*** Created on Sat Jan 20, 2024 23:33:37
+*** Last revised on Sun Jan 21, 2024 10:23:44
+*** Written on Sun Jan 21, 2024 15:03:54 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: IOPAD{sch}
+Mnmos-4@0 IOA gnd gnd gnd NMOS L=0.6U W=0.6U
+Mnmos-4@1 IOA gnd gnd gnd NMOS L=0.6U W=0.6U
+Mnmos-4@2 IOA gnd gnd gnd NMOS L=0.6U W=0.6U
+Mnmos-4@3 IOA gnd gnd gnd NMOS L=0.6U W=0.6U
+Mnmos-4@4 IOA gnd gnd gnd NMOS L=0.6U W=0.6U
+Mnmos-4@5 IOA gnd gnd gnd NMOS L=0.6U W=0.6U
+Mnmos-4@6 IOA gnd gnd gnd NMOS L=0.6U W=0.6U
+Mnmos-4@7 IOA gnd gnd gnd NMOS L=0.6U W=0.6U
+Mnmos-4@8 IOA gnd gnd gnd NMOS L=0.6U W=0.6U
+Mpmos-4@0 IOA vdd vdd vdd PMOS L=0.6U W=1.2U
+Mpmos-4@1 IOA vdd vdd vdd PMOS L=0.6U W=1.2U
+Mpmos-4@2 IOA vdd vdd vdd PMOS L=0.6U W=1.2U
+Mpmos-4@3 IOA vdd vdd vdd PMOS L=0.6U W=1.2U
+Mpmos-4@4 IOA vdd vdd vdd PMOS L=0.6U W=1.2U
+Mpmos-4@5 IOA vdd vdd vdd PMOS L=0.6U W=1.2U
+Mpmos-4@6 IOA vdd vdd vdd PMOS L=0.6U W=1.2U
+Mpmos-4@7 IOA vdd vdd vdd PMOS L=0.6U W=1.2U
+Mpmos-4@8 IOA vdd vdd vdd PMOS L=0.6U W=1.2U
+
+* Spice Code nodes in cell cell 'IOPAD{sch}'
+.include "C:\Users\LENOVO\Desktop\-_-\thuchanhthietketuongtu\Electric\libs\models\C5_models.txt"
+VVDD VDD GND 5V
+.noise v(IOB) VVA dec 1000 1G 100G
+.probe v(onoise)
+.ac dec 1000 1G 1000G
+.probe v(B)
+CCL GND IOB 1u
+VVA IOA gnd DC=5V AC=1V SIN(5V 1V 800MEG 1ns)
+.END

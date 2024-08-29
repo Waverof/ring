@@ -1,0 +1,33 @@
+*** SPICE deck for cell RING{sch} from library CUOIKI
+*** Created on Sat Jan 20, 2024 15:54:54
+*** Last revised on Sun Jan 21, 2024 14:46:07
+*** Written on Sun Jan 21, 2024 14:54:02 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: RING{sch}
+Mnmos-4@0 net@36 net@16 gnd gnd NMOS L=0.6U W=2.05U
+Mnmos-4@1 net@48 net@36 gnd gnd NMOS L=0.6U W=2.05U
+Mnmos-4@2 net@60 net@48 gnd gnd NMOS L=0.6U W=2.05U
+Mnmos-4@3 B net@60 gnd gnd NMOS L=0.6U W=2.05U
+Mnmos-4@8 net@16 B gnd gnd NMOS L=0.6U W=2.05U
+Mnmos-4@9 net@16 A gnd gnd NMOS L=0.6U W=2.05U
+Mpmos-4@0 net@36 net@16 vdd vdd PMOS L=0.6U W=5.7U
+Mpmos-4@1 net@48 net@36 vdd vdd PMOS L=0.6U W=5.7U
+Mpmos-4@2 net@60 net@48 vdd vdd PMOS L=0.6U W=5.7U
+Mpmos-4@3 B net@60 vdd vdd PMOS L=0.6U W=5.7U
+Mpmos-4@8 net@263 B vdd vdd PMOS L=0.6U W=5.7U
+Mpmos-4@9 net@16 A net@263 vdd PMOS L=0.6U W=5.7U
+
+* Spice Code nodes in cell cell 'RING{sch}'
+.include "C:\Users\LENOVO\Desktop\-_-\thuchanhthietketuongtu\Electric\libs\models\C5_models.txt"
+VDD VDD 0 dc 5.3
+
+.tran 0.1n 30n
+VA A 0 DC 0
+.ic v(B)= 5
+;.step VDD 4.7 5.4 0.1
+;.step temp 25 35 2
+.END

@@ -1,0 +1,23 @@
+*** SPICE deck for cell INV{sch} from library CUOIKI
+*** Created on Sat Jan 20, 2024 15:01:01
+*** Last revised on Sat Jan 20, 2024 23:47:12
+*** Written on Mon Jan 22, 2024 15:42:55 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: INV{sch}
+Mnmos-4@0 O IN gnd gnd NMOS L=0.6U W=2.05U
+Mpmos-4@0 O IN vdd vdd PMOS L=0.6U W=5.7U
+
+* Spice Code nodes in cell cell 'INV{sch}'
+.include "C:\Users\LENOVO\Desktop\-_-\thuchanhthietketuongtu\Electric\libs\models\C5_models.txt"
+VDD VDD 0 dc 5
+.tran 0.1n 1000n
+.meas TRAN TP_HL TRIG V(IN) VAL=0.5*5 RISE=1 TARG V(O) VAL=0.5*5 FALL=1
+.meas TRAN TP_LH TRIG V(IN) VAL=0.5*5 FALL=1 TARG V(O) VAL=0.5*5 RISE=1
+.meas TRAN TIME_DELAY PARAM=TP_HL + TP_LH
+V2 IN 0 PULSE(0 5 40n 200n 200n 200n 800n)
+.END
+

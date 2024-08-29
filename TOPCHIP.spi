@@ -1,0 +1,207 @@
+*** SPICE deck for cell TOPCHIP{lay} from library CUOIKI
+*** Created on Sun Jan 21, 2024 11:49:37
+*** Last revised on Sun Jan 21, 2024 14:26:07
+*** Written on Mon Jan 22, 2024 16:29:13 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+***    P-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    N-Active:	areacap=0.9FF/um^2,	edgecap=0.0FF/um,	res=3.0ohms/sq
+***    Polysilicon-1:	areacap=0.1467FF/um^2,	edgecap=0.0608FF/um,	res=6.2ohms/sq
+***    Polysilicon-2:	areacap=1.0FF/um^2,	edgecap=0.0FF/um,	res=50.0ohms/sq
+***    Transistor-Poly:	areacap=0.09FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Poly-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.2ohms/sq
+***    Active-Cut:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=2.5ohms/sq
+***    Metal-1:	areacap=0.1209FF/um^2,	edgecap=0.1104FF/um,	res=0.078ohms/sq
+***    Via1:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+***    Metal-2:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via2:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.9ohms/sq
+***    Metal-3:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via3:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-4:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via4:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-5:	areacap=0.0843FF/um^2,	edgecap=0.0974FF/um,	res=0.078ohms/sq
+***    Via5:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=0.8ohms/sq
+***    Metal-6:	areacap=0.0423FF/um^2,	edgecap=0.1273FF/um,	res=0.036ohms/sq
+***    Hi-Res:	areacap=0.0FF/um^2,	edgecap=0.0FF/um,	res=1.0ohms/sq
+
+*** SUBCIRCUIT CUOIKI__IOPAD FROM CELL IOPAD{lay}
+.SUBCKT CUOIKI__IOPAD gnd IOA vdd
+Mnmos@0 gnd gnd IOA gnd NMOS L=0.6U W=0.6U AS=2.25P AD=34.47P PS=6U PD=56.605U
+Mnmos@1 gnd gnd IOA gnd NMOS L=0.6U W=0.6U AS=2.25P AD=34.47P PS=6U PD=56.605U
+Mnmos@2 gnd gnd IOA gnd NMOS L=0.6U W=0.6U AS=2.25P AD=34.47P PS=6U PD=56.605U
+Mnmos@3 gnd gnd IOA gnd NMOS L=0.6U W=0.6U AS=2.25P AD=34.47P PS=6U PD=56.605U
+Mnmos@4 gnd gnd IOA gnd NMOS L=0.6U W=0.6U AS=2.25P AD=34.47P PS=6U PD=56.605U
+Mnmos@5 gnd gnd IOA gnd NMOS L=0.6U W=0.6U AS=2.25P AD=34.47P PS=6U PD=56.605U
+Mnmos@6 gnd gnd IOA gnd NMOS L=0.6U W=0.6U AS=2.25P AD=34.47P PS=6U PD=56.605U
+Mnmos@7 gnd gnd IOA gnd NMOS L=0.6U W=0.6U AS=2.25P AD=34.47P PS=6U PD=56.605U
+Mnmos@8 gnd gnd IOA gnd NMOS L=0.6U W=0.6U AS=2.25P AD=34.47P PS=6U PD=56.605U
+Mpmos@0 vdd vdd IOA vdd PMOS L=0.6U W=1.2U AS=2.25P AD=44.625P PS=6U PD=63.2U
+Mpmos@1 vdd vdd IOA vdd PMOS L=0.6U W=1.2U AS=2.25P AD=44.625P PS=6U PD=63.2U
+Mpmos@2 vdd vdd IOA vdd PMOS L=0.6U W=1.2U AS=2.25P AD=44.625P PS=6U PD=63.2U
+Mpmos@3 vdd vdd IOA vdd PMOS L=0.6U W=1.2U AS=2.25P AD=44.625P PS=6U PD=63.2U
+Mpmos@4 vdd vdd IOA vdd PMOS L=0.6U W=1.2U AS=2.25P AD=44.625P PS=6U PD=63.2U
+Mpmos@5 vdd vdd IOA vdd PMOS L=0.6U W=1.2U AS=2.25P AD=44.625P PS=6U PD=63.2U
+Mpmos@6 vdd vdd IOA vdd PMOS L=0.6U W=1.2U AS=2.25P AD=44.625P PS=6U PD=63.2U
+Mpmos@7 vdd vdd IOA vdd PMOS L=0.6U W=1.2U AS=2.25P AD=44.625P PS=6U PD=63.2U
+Mpmos@8 vdd vdd IOA vdd PMOS L=0.6U W=1.2U AS=2.25P AD=44.625P PS=6U PD=63.2U
+** Extracted Parasitic Capacitors ***
+C0 IOA 0 37.805fF
+** Extracted Parasitic Resistors ***
+
+* Spice Code nodes in cell cell 'IOPAD{lay}'
+.include "C:\Users\LENOVO\Desktop\-_-\thuchanhthietketuongtu\Electric\libs\models\C5_models.txt"
+;tran 10u
+;VVDD VDD GND 5V
+;.noise v(B) VV1 dec 1000 1G 100G
+;.probe v(onoise)
+;.ac dec 1000 1G 1000G
+;.probe v(IOB)
+.ENDS CUOIKI__IOPAD
+
+*** SUBCIRCUIT CUOIKI__RING FROM CELL RING{lay}
+.SUBCKT CUOIKI__RING A B gnd vdd
+Mnmos@7 net@45 B#4nmos@7_poly-right gnd gnd NMOS L=0.6U W=2.05U AS=51.104P AD=4.899P PS=88.356U PD=9.532U
+Mnmos@11 gnd A#2nmos@11_poly-right net@45 gnd NMOS L=0.6U W=2.049U AS=4.899P AD=51.104P PS=9.532U PD=88.356U
+Mnmos@12 net@142 net@45#7nmos@12_poly-right gnd gnd NMOS L=0.6U W=2.049U AS=51.104P AD=5.812P PS=88.356U PD=10.749U
+Mnmos@13 net@80#1contact@6_metal-1-polysilicon-1 net@142#3nmos@13_poly-right gnd gnd NMOS L=0.6U W=2.049U AS=51.104P AD=5.812P PS=88.356U PD=10.749U
+Mnmos@14 net@83 net@80#2nmos@14_poly-right gnd gnd NMOS L=0.6U W=2.049U AS=51.104P AD=5.812P PS=88.356U PD=10.749U
+Mnmos@15 B net@83#4nmos@15_poly-right gnd gnd NMOS L=0.6U W=2.049U AS=51.104P AD=5.812P PS=88.356U PD=10.749U
+Mpmos@0 net@80#1contact@6_metal-1-polysilicon-1 net@142#5pmos@0_poly-left vdd vdd PMOS L=0.6U W=5.7U AS=76.68P AD=5.812P PS=125.409U PD=10.749U
+Mpmos@1 net@83 net@80 vdd vdd PMOS L=0.6U W=5.7U AS=76.68P AD=5.812P PS=125.409U PD=10.749U
+Mpmos@2 B net@83#3pmos@2_poly-left vdd vdd PMOS L=0.6U W=5.7U AS=76.68P AD=5.812P PS=125.409U PD=10.749U
+Mpmos@3 net@142 net@45#5pmos@3_poly-left vdd vdd PMOS L=0.6U W=5.7U AS=76.68P AD=5.812P PS=125.409U PD=10.749U
+Mpmos@4 net@45 A#0pmos@4_poly-left net@33 vdd PMOS L=0.6U W=5.7U AS=8.55P AD=4.899P PS=14.4U PD=9.532U
+Mpmos@5 net@33 B#2pmos@5_poly-left vdd vdd PMOS L=0.6U W=5.7U AS=76.68P AD=8.55P PS=125.409U PD=14.4U
+** Extracted Parasitic Capacitors ***
+C0 A 0 1.037fF
+C1 net@45 0 10.58fF
+C2 net@80#1contact@6_metal-1-polysilicon-1 0 4.941fF
+C3 net@83 0 5.053fF
+C4 B#3contact@8_metal-1-polysilicon-1 0 11.886fF
+C5 net@142 0 4.857fF
+C6 B#4nmos@7_poly-right 0 0.115fF
+C7 net@45#7nmos@12_poly-right 0 0.102fF
+C8 net@142#3nmos@13_poly-right 0 0.102fF
+C9 net@80#2nmos@14_poly-right 0 0.102fF
+C10 net@83#4nmos@15_poly-right 0 0.115fF
+C11 B 0 13.646fF
+C12 net@142#5pmos@0_poly-left 0 0.157fF
+C13 net@80 0 0.141fF
+C14 net@83#3pmos@2_poly-left 0 0.141fF
+C15 net@45#5pmos@3_poly-left 0 0.145fF
+C16 A#0pmos@4_poly-left 0 0.152fF
+C17 net@33 0 1.78fF
+C18 B#2pmos@5_poly-left 0 0.141fF
+** Extracted Parasitic Resistors ***
+R0 A#0pmos@4_poly-left A#0pmos@4_poly-left##0 8.99
+C19 A#0pmos@4_poly-left##0 0 0.152fF
+R1 A#0pmos@4_poly-left##0 A#0pmos@4_poly-left##1 8.99
+C20 A#0pmos@4_poly-left##1 0 0.152fF
+R2 A#0pmos@4_poly-left##1 A#0pmos@4_poly-left##2 8.99
+C21 A#0pmos@4_poly-left##2 0 0.152fF
+R3 A#0pmos@4_poly-left##2 A#0pmos@4_poly-left##3 8.99
+C22 A#0pmos@4_poly-left##3 0 0.152fF
+R4 A#0pmos@4_poly-left##3 A 8.99
+R5 net@45#5pmos@3_poly-left net@45#5pmos@3_poly-left##0 8.913
+C23 net@45#5pmos@3_poly-left##0 0 0.145fF
+R6 net@45#5pmos@3_poly-left##0 net@45#5pmos@3_poly-left##1 8.913
+C24 net@45#5pmos@3_poly-left##1 0 0.145fF
+R7 net@45#5pmos@3_poly-left##1 net@45#5pmos@3_poly-left##2 8.913
+C25 net@45#5pmos@3_poly-left##2 0 0.145fF
+R8 net@45#5pmos@3_poly-left##2 net@45 8.913
+R9 net@80 net@80##0 8.37
+C26 net@80##0 0 0.141fF
+R10 net@80##0 net@80##1 8.37
+C27 net@80##1 0 0.141fF
+R11 net@80##1 net@80##2 8.37
+C28 net@80##2 0 0.141fF
+R12 net@80##2 net@80##3 8.37
+C29 net@80##3 0 0.141fF
+R13 net@80##3 net@80#1contact@6_metal-1-polysilicon-1 8.37
+R14 net@83 net@83##0 8.37
+C30 net@83##0 0 0.141fF
+R15 net@83##0 net@83##1 8.37
+C31 net@83##1 0 0.141fF
+R16 net@83##1 net@83##2 8.37
+C32 net@83##2 0 0.141fF
+R17 net@83##2 net@83##3 8.37
+C33 net@83##3 0 0.141fF
+R18 net@83##3 net@83#3pmos@2_poly-left 8.37
+R19 B#2pmos@5_poly-left B#2pmos@5_poly-left##0 8.37
+C34 B#2pmos@5_poly-left##0 0 0.141fF
+R20 B#2pmos@5_poly-left##0 B#2pmos@5_poly-left##1 8.37
+C35 B#2pmos@5_poly-left##1 0 0.141fF
+R21 B#2pmos@5_poly-left##1 B#2pmos@5_poly-left##2 8.37
+C36 B#2pmos@5_poly-left##2 0 0.141fF
+R22 B#2pmos@5_poly-left##2 B#2pmos@5_poly-left##3 8.37
+C37 B#2pmos@5_poly-left##3 0 0.141fF
+R23 B#2pmos@5_poly-left##3 B#3contact@8_metal-1-polysilicon-1 8.37
+R24 net@45#7nmos@12_poly-right net@45#7nmos@12_poly-right##0 6.717
+C38 net@45#7nmos@12_poly-right##0 0 0.102fF
+R25 net@45#7nmos@12_poly-right##0 net@45#7nmos@12_poly-right##1 6.717
+C39 net@45#7nmos@12_poly-right##1 0 0.102fF
+R26 net@45#7nmos@12_poly-right##1 net@45 6.717
+R27 net@80#2nmos@14_poly-right net@80#2nmos@14_poly-right##0 6.717
+C40 net@80#2nmos@14_poly-right##0 0 0.102fF
+R28 net@80#2nmos@14_poly-right##0 net@80#2nmos@14_poly-right##1 6.717
+C41 net@80#2nmos@14_poly-right##1 0 0.102fF
+R29 net@80#2nmos@14_poly-right##1 net@80#1contact@6_metal-1-polysilicon-1 6.717
+R30 net@83#4nmos@15_poly-right net@83#4nmos@15_poly-right##0 8.525
+C42 net@83#4nmos@15_poly-right##0 0 0.115fF
+R31 net@83#4nmos@15_poly-right##0 net@83 8.525
+R32 net@142#3nmos@13_poly-right net@142#3nmos@13_poly-right##0 6.717
+C43 net@142#3nmos@13_poly-right##0 0 0.102fF
+R33 net@142#3nmos@13_poly-right##0 net@142#3nmos@13_poly-right##1 6.717
+C44 net@142#3nmos@13_poly-right##1 0 0.102fF
+R34 net@142#3nmos@13_poly-right##1 net@142 6.717
+R35 net@142 net@142##0 9.688
+C45 net@142##0 0 0.157fF
+R36 net@142##0 net@142##1 9.688
+C46 net@142##1 0 0.157fF
+R37 net@142##1 net@142##2 9.688
+C47 net@142##2 0 0.157fF
+R38 net@142##2 net@142#5pmos@0_poly-left 9.688
+R39 A#2nmos@11_poly-right A#2nmos@11_poly-right##0 6.975
+R40 A#2nmos@11_poly-right##0 A 6.975
+R41 B#4nmos@7_poly-right B#4nmos@7_poly-right##0 8.525
+C48 B#4nmos@7_poly-right##0 0 0.115fF
+R42 B#4nmos@7_poly-right##0 B#3contact@8_metal-1-polysilicon-1 8.525
+R43 B B#3contact@8_metal-1-polysilicon-1 4.03
+
+* Spice Code nodes in cell cell 'RING{lay}'
+.include "C:\Users\LENOVO\Desktop\-_-\thuchanhthietketuongtu\Electric\libs\models\C5_models.txt"
+;VDD VDD 0 dc 5
+;.tran 0.1n 30n
+;VA A 0 DC 0
+.ENDS CUOIKI__RING
+*** SUBCIRCUIT CUOIKI__ESD FROM CELL ESD{sch}
+.SUBCKT CUOIKI__ESD ESD gnd
+** GLOBAL gnd
+CESD_C1 esd_c1 gnd 0.15n
+CESD_C2 esd_c2 gnd 8p
+LESD_L1 esd_r1 ESD 2.4u
+LESD_L2 esd_r2 ESD 0.14u
+RESD_R1 esd_r1 esd_c1 330
+RESD_R2 esd_r2 esd_c2 200
+RESD_RL ESD gnd 390
+
+* Spice Code nodes in cell cell 'ESD{sch}'
+.param vnom =2 *8000
+.ic v(esd_c1)=vnom
+.ic v(esd_c2)=vnom
+.ENDS CUOIKI__ESD
+*** TOP LEVEL CELL: TOPCHIP{lay}
+XESD@1 net@0 gnd CUOIKI__ESD
+XIOPAD@0 gnd OUT vdd CUOIKI__IOPAD
+XIOPAD@1 gnd IN vdd CUOIKI__IOPAD
+XRING@1 IN OUT gnd vdd CUOIKI__RING
+** Extracted Parasitic Capacitors ***
+C0 OUT 0 7.492fF
+C1 IN 0 9.211fF
+** Extracted Parasitic Resistors ***
+* Spice Code nodes in cell cell 'Testbench{sch}'
+.include "C:\Users\LENOVO\Desktop\-_-\thuchanhthietketuongtu\Electric\libs\models\C5_models.txt"
+.tran 0.1n 20n
+VVDD VDD GND 5V
+CCL GND OUT 1u
+.END

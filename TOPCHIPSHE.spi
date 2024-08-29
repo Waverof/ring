@@ -1,0 +1,100 @@
+*** SPICE deck for cell TOPCHIP{sch} from library CUOIKI
+*** Created on Sat Jan 20, 2024 23:36:37
+*** Last revised on Sun Jan 21, 2024 14:02:58
+*** Written on Sun Jan 21, 2024 15:04:10 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** SUBCIRCUIT CUOIKI__IOPAD FROM CELL IOPAD{sch}
+.SUBCKT CUOIKI__IOPAD gnd IOA vdd
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos-4@0 IOA gnd gnd gnd NMOS L=0.6U W=0.6U
+Mnmos-4@1 IOA gnd gnd gnd NMOS L=0.6U W=0.6U
+Mnmos-4@2 IOA gnd gnd gnd NMOS L=0.6U W=0.6U
+Mnmos-4@3 IOA gnd gnd gnd NMOS L=0.6U W=0.6U
+Mnmos-4@4 IOA gnd gnd gnd NMOS L=0.6U W=0.6U
+Mnmos-4@5 IOA gnd gnd gnd NMOS L=0.6U W=0.6U
+Mnmos-4@6 IOA gnd gnd gnd NMOS L=0.6U W=0.6U
+Mnmos-4@7 IOA gnd gnd gnd NMOS L=0.6U W=0.6U
+Mnmos-4@8 IOA gnd gnd gnd NMOS L=0.6U W=0.6U
+Mpmos-4@0 IOA vdd vdd vdd PMOS L=0.6U W=1.2U
+Mpmos-4@1 IOA vdd vdd vdd PMOS L=0.6U W=1.2U
+Mpmos-4@2 IOA vdd vdd vdd PMOS L=0.6U W=1.2U
+Mpmos-4@3 IOA vdd vdd vdd PMOS L=0.6U W=1.2U
+Mpmos-4@4 IOA vdd vdd vdd PMOS L=0.6U W=1.2U
+Mpmos-4@5 IOA vdd vdd vdd PMOS L=0.6U W=1.2U
+Mpmos-4@6 IOA vdd vdd vdd PMOS L=0.6U W=1.2U
+Mpmos-4@7 IOA vdd vdd vdd PMOS L=0.6U W=1.2U
+Mpmos-4@8 IOA vdd vdd vdd PMOS L=0.6U W=1.2U
+
+* Spice Code nodes in cell cell 'IOPAD{sch}'
+.include "C:\Users\LENOVO\Desktop\-_-\thuchanhthietketuongtu\Electric\libs\models\C5_models.txt"
+;VVDD VDD GND 5V
+;.noise v(IOB) VVA dec 1000 1G 100G
+;.probe v(onoise)
+;.ac dec 1000 1G 1000G
+;.probe v(B)
+;CCL GND IOB 1u
+;VVA IOA gnd DC=5V AC=1V SIN(5V 1V 800MEG 1ns)
+.ENDS CUOIKI__IOPAD
+
+
+*** SUBCIRCUIT CUOIKI__RING FROM CELL RING{sch}
+.SUBCKT CUOIKI__RING A B gnd vdd
+** GLOBAL gnd
+** GLOBAL vdd
+Mnmos-4@0 net@36 net@16 gnd gnd NMOS L=0.6U W=2.05U
+Mnmos-4@1 net@48 net@36 gnd gnd NMOS L=0.6U W=2.05U
+Mnmos-4@2 net@60 net@48 gnd gnd NMOS L=0.6U W=2.05U
+Mnmos-4@3 B net@60 gnd gnd NMOS L=0.6U W=2.05U
+Mnmos-4@8 net@16 B gnd gnd NMOS L=0.6U W=2.05U
+Mnmos-4@9 net@16 A gnd gnd NMOS L=0.6U W=2.05U
+Mpmos-4@0 net@36 net@16 vdd vdd PMOS L=0.6U W=5.7U
+Mpmos-4@1 net@48 net@36 vdd vdd PMOS L=0.6U W=5.7U
+Mpmos-4@2 net@60 net@48 vdd vdd PMOS L=0.6U W=5.7U
+Mpmos-4@3 B net@60 vdd vdd PMOS L=0.6U W=5.7U
+Mpmos-4@8 net@263 B vdd vdd PMOS L=0.6U W=5.7U
+Mpmos-4@9 net@16 A net@263 vdd PMOS L=0.6U W=5.7U
+
+* Spice Code nodes in cell cell 'RING{sch}'
+.include "C:\Users\LENOVO\Desktop\-_-\thuchanhthietketuongtu\Electric\libs\models\C5_models.txt"
+;VDD VDD 0 dc 5
+;.tran 0.1n 30n
+;VA A 0 DC 0
+;.ic v(OSC)= 5
+;.step VVDD 4.7 5.4 0.1
+;.step temp 25 25 2
+.ENDS CUOIKI__RING
+
+*** SUBCIRCUIT CUOIKI__ESD FROM CELL ESD{sch}
+.SUBCKT CUOIKI__ESD ESD gnd
+** GLOBAL gnd
+CESD_C1 esd_c1 gnd 0.15n
+CESD_C2 esd_c2 gnd 8p
+LESD_L1 esd_r1 ESD 2.4u
+LESD_L2 esd_r2 ESD 0.14u
+RESD_R1 esd_r1 esd_c1 330
+RESD_R2 esd_r2 esd_c2 200
+RESD_RL ESD gnd 390
+
+* Spice Code nodes in cell cell 'ESD{sch}'
+.param vnom =2 *8000
+.ic v(esd_c1)=vnom
+.ic v(esd_c2)=vnom
+.ENDS CUOIKI__ESD
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: TOPCHIP{sch}
+XESD@1 net@0 gnd CUOIKI__ESD
+
+XIOPAD@2 gnd OUT vdd CUOIKI__IOPAD
+XIOPAD@3 gnd IN vdd CUOIKI__IOPAD
+XRING@1 IN OUT gnd vdd CUOIKI__RING
+* Spice Code nodes in cell cell 'Testbench{sch}'
+.include "C:\Users\LENOVO\Desktop\-_-\thuchanhthietketuongtu\Electric\libs\models\C5_models.txt"
+.tran 0.1n 20n
+VVDD VDD GND 5V
+CCL GND OUT 1u
+.END
